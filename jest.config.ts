@@ -1,24 +1,29 @@
 import type { Config } from 'jest'
+import nextJest from 'next/jest.js'
+
+const createJestConfig = nextJest({
+  dir: './',
+})
 
 const config: Config = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
+  clearMocks: true,
+  testEnvironment: 'jest-environment-jsdom',
+  testMatch: [
+    '**/__tests__/**/*.test.ts',
+    '**/__tests__/**/*.test.tsx',
+    '**/*.test.ts',
+    '**/*.test.tsx'
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  transform: {
-    '^.+\\.tsx?$': ['ts-jest', {
-      tsconfig: {
-        jsx: 'react-jsx',
-      },
-    }],
-  },
-  testPathPattern: '__tests__',
   collectCoverageFrom: [
     'lib/**/*.ts',
     'app/api/**/*.ts',
+    'components/**/*.{ts,tsx}',
     '!**/*.d.ts',
+    '!**/node_modules/**',
   ],
 }
 
-export default config
+export default createJestConfig(config)
