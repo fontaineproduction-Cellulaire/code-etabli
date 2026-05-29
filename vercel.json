@@ -1,14 +1,13 @@
 {
-            "framework": "nextjs",
-            "buildCommand": "next build",
-            "installCommand": "npm install --prefer-online",
-            "functions": {
-                            "app/api/ingest/route.ts": {
-                                                "maxDuration": 300,
-                                                "memory": 3008
-                            },
-                            "app/api/search/route.ts": {
-                                                "maxDuration": 60
-                            }
-            }
+                "framework": "nextjs",
+                "buildCommand": "next build",
+                "installCommand": "npm install --prefer-online",
+                "functions": {
+                                    "app/api/ingest/route.ts": {
+                                                            "maxDuration": 60
+                                    },
+                                    "app/api/search/route.ts": {
+                                                            "maxDuration": 60
+                                    }
+                }
 }
