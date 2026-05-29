@@ -5,7 +5,7 @@ Application de recherche dans les codes du bâtiment québécois.
 ---
 
 ## GUIDE D'INSTALLATION COMPLET
-### Aucun terminal requis — tout se fait dans le navigateur
+### Aucun terminal requis — tout se fait dans le navigateur 
 
 ---
 
