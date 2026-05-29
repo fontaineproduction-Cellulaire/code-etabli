@@ -1,13 +1,13 @@
 {
-    "framework": "nextjs",
-    "buildCommand": "prisma generate && next build",
-    "functions": {
-          "app/api/ingest/route.ts": {
-                  "maxDuration": 300,
-                  "memory": 3008
-          },
-          "app/api/search/route.ts": {
-                  "maxDuration": 60
-          }
-    }
+        "framework": "nextjs",
+        "buildCommand": "next build",
+        "functions": {
+                    "app/api/ingest/route.ts": {
+                                    "maxDuration": 300,
+                                    "memory": 3008
+                    },
+                    "app/api/search/route.ts": {
+                                    "maxDuration": 60
+                    }
+        }
 }
